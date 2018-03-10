@@ -37,4 +37,45 @@ body {font-family: Arial;}
     border: 1px solid #ccc;
     border-top: none;
 }
+
+.orderBtn{
+	background: #30cf88;
+	width: 120px;
+	height: 40px;
+	font-size: 12pt;
+	color: white;
+	border: none;	
+	-webkit-transition-duration: 0.3s; /* Safari */
+    transition-duration: 0.3s;
+	
+}
+.orderBtn:hover{
+	background-color: white;
+	color: black;/*#30cf88;*/
+	border: 2px solid #30cf88;
+}
+
+.orderBtn:active{
+		background-color: #D2FEEA;
+	color: black;/*#30cf88;*/
+	border: 2px solid #30cf88;
+}
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.column p{
+	width: 200px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 </style>
