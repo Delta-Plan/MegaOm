@@ -1,78 +1,40 @@
 <style>
-body {
-	margin-top: 50px;
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
 }
-#raz { /* корпус */ 
-  position: relative;
-  height: 250px;
-  border-top: 30px solid #fff;
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
 }
-#raz > div { /* вкладка */ 
-  position: absolute;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  visibility: collapse;
-  transition: 0s 9999999s;
-  box-sizing: border-box;
-  background: #fff;
-  padding: 5px;
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
 }
-#raz > div:before { /* рамка вкладки */ 
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 2%;
-  bottom: 0;
-  border: #808080 solid 1px;
-  border-top: none;
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
 }
-#raz > div:hover, #raz > div:nth-of-type(1) {
-  visibility: visible;
-  transition: 0s;
-  /*margin-top: 20px; */
-}
-#raz:hover > div:not(:hover) {
-  visibility: hidden;
-  transition: 0s;
-}
-#raz > div > span { /* кнопка */ 
-  position: absolute;
-  top: -30px;
-  line-height: 30px;
-  height: 70px;
-  width: 14%; /* 7 вкладки, а значит 100/7 */ 
-  text-align: center;
-  box-sizing: border-box;
-  border: 1px solid rgb(128,128,128);
-  border-left-color: rgba(0,0,0,0);
-  visibility: visible;
-  transition: 0s 9999999s;
-  cursor: pointer;
-}
-#raz > div:nth-of-type(1) > span {left: 0; border-left-color: rgb(128,128,128);}
-#raz > div:nth-of-type(2) > span {left: 14%;}
-#raz > div:nth-of-type(3) > span {left: 28%;}
-#raz > div:nth-of-type(4) > span {left: 42%;}
-#raz > div:nth-of-type(5) > span {left: 56%;}
-#raz > div:nth-of-type(6) > span {left: 70%;}
-#raz > div:nth-of-type(7) > span {left: 84%;}
-#raz > div:hover > span, #raz > div:nth-of-type(1) > span {
-  border-bottom-color: rgba(0,0,0,0);
-  transition:  0s;
-}
-#raz:hover > div:not(:hover) > span {
-  border-bottom-color: rgba(128,128,128,.99);
-  transition:  0s;
-}
-#raz > div:not(:nth-of-type(1)):not(:hover):after { /* по€вл€етс€ нижн€€ граница у первой кнопки */ 
-  content: "";
-  left: 0;
-  position: absolute;
-  top: -1px;
-  width: 14%;
-  border-top: 1px solid rgb(128,128,128);
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
 }
 </style>

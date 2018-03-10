@@ -1,21 +1,52 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="main.css">
+<script src="main.js"></script>
 </head>
-
 <body>
 
-<div id="raz">
-	<div><span>MegaOM</span> Описание </div>
-  <div><span>Электромонтаж</span>1 вкладка</div>
-  <div><span>Строительные работы</span>2 вкладка</div>
-  <div><span>Наши работы</span>3 вкладка</div>
-  <div><span>Проектирование</span>4 вкладка</div>
-  <div><span>Контакты</span>5 вкладка</div>
-  <div><span>Заказать обратный звонок</span>6 вкладка</div>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'tabFirst')">MegaOM</button>
+  <button class="tablinks" onclick="openCity(event, 'tabSecond')">Электромонтаж</button>
+  <button class="tablinks" onclick="openCity(event, 'tabThird')">Строительные работы</button>
+  <button class="tablinks" onclick="openCity(event, 'tabFourth')">Наши работы</button>
+  <button class="tablinks" onclick="openCity(event, 'tabFifth')">Проектирование</button>
+  <button class="tablinks" onclick="openCity(event, 'tabSixth')">Контакты</button>
+  <!-- <button class="tablinks" onclick="openCity(event, 'Tokyo')">Строительные работы</button> -->
 </div>
 
+<div id="tabFirst" class="tabcontent">
+  <h3>MegaOM</h3>
+  <p>desctiption one</p>
+</div>
+
+<div id="tabSecond" class="tabcontent">
+  <h3>Электромонтаж</h3>
+  <p>description two</p> 
+</div>
+
+<div id="tabThird" class="tabcontent">
+<h3>Строительные работы</h3>
+<p>description two and a half</p>
+</div>
+
+<div id="tabFourth" class="tabcontent">
+  <h3>Наши работы</h3>
+  <p>description four</p>
+</div>
+
+<div id="tabFifth" class="tabcontent">
+<h3>Проектирование</h3>
+<p>description five</p>
+</div>
+
+
+<div id="tabSixth" class="tabcontent">
+<h3>Контакты</h3>
+<p>description six</p>
+</div>
+    
 </body>
-</html>
+</html> 
